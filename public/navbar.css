@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: #fff;
+}
+
+nav{
+    position: sticky;
+    top:0;
+    bottom: 0; 
+    height: 100vh;
+    left: 0px; 
+    background: #021d3f;
+    width: 80px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, alpha);
+}
+
+.logo{
+     text-align: center;
+     display: flex;
+     transition: all 0.5s ease;
+     margin: 10px 0 0 10px;
+     padding-bottom: 3rem;
+}
+
+i{
+    color: white;
+    padding-left: 0;
+    margin-left: 0;
+    border-left: 0;
+}
+
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+a{
+    position: relative;
+    right: 30px;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px 0 10px 0;
+}
+
+.fas{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+    color: white;
+}
+
+a:hover{
+    background: #E7B10A;
+}
+
+a:hover{
+    background: #E7B10A;
+}
+
+nav:hover{
+    width: 280px;
+    transition: all 0.5s ease;
+}
+
+.logout{
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
+}

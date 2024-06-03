@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="dcomplaints.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>ComplaintCo • Department Complaints</title>
+
+    <style>
+      .container{
+    display: flex;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.main{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+
+/* .main-top{
+    display: flex;
+    width: 100%;
+} */
+
+.complaints{
+    margin-top: 20px;
+    margin-left: 9%;
+    text-transform: capitalize;
+}
+
+.inprogress-complaints{
+    width: 125%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 15px;
+    min-width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+thead{
+    background-color: #E7B10A;
+}
+
+tr:hover{
+    background-color: #E7B10A;
+}
+      .container{
+    display: flex;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.main{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+
+.main-top{
+    display: flex;
+    width: 100%;
+}
+
+.main-top i{
+    position: absolute;
+    right: 0;
+    margin: 10px 30px;
+    color: rgb(110, 109, 109);
+    cursor: pointer;
+}
+
+.main .users{
+    display: flex;
+    width: 100%;
+}
+
+.users{
+    margin-left: 9%;
+}
+
+.users .card{
+    width: 25%;
+    margin: 10px;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.users .card h4{
+    text-transform: uppercase;
+}
+
+.users card p{
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.users table{
+    margin: auto;
+}
+
+.users .per span{
+    padding: 5px;
+    border-radius: 10px;
+    background: rgb(223, 223, 223);
+}
+
+.users td{
+    font-size: 14px;
+    padding-right: 15px;
+}
+
+.show{
+    width: 100%;
+    margin-top: 8px;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #E7B10A;
+}
+
+.show:hover{
+    background: #E7B10A;
+    color: white;
+    transition: 0.5s;
+}
+
+.complaints{
+    margin-top: 20px;
+    margin-left: 9%;
+    text-transform: capitalize;
+}
+
+.inprogress-complaints{
+    width: 115%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 15px;
+    min-width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+      *{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: #fff;
+}
+
+nav{
+    position: sticky;
+    top:0;
+    bottom: 0; 
+    height: 100vh;
+    left: 0px; 
+    background: #021d3f;
+    width: 80px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, alpha);
+}
+
+.logo{
+     text-align: center;
+     display: flex;
+     transition: all 0.5s ease;
+     margin: 10px 0 0 10px;
+     padding-bottom: 3rem;
+}
+
+i{
+    color: white;
+    padding-left: 0;
+    margin-left: 0;
+    border-left: 0;
+}
+
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+a{
+    position: relative;
+    right: 30px;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px 0 10px 0;
+}
+
+.fas{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+    color: white;
+}
+
+a:hover{
+    background: #E7B10A;
+}
+
+a:hover{
+    background: #E7B10A;
+}
+
+nav:hover{
+    width: 300px;
+    transition: all 0.5s ease;
+}
+
+.logout{
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
+}
+      .edit-button{
+        width: 50px;
+        background-color: #E7B10A;
+        position: relative;
+        left: 100px;
+      }
+      .btn {
+        background: #F7C04A;
+        background-image: -webkit-linear-gradient(top, #F7C04A, #E7B10A);
+        background-image: -moz-linear-gradient(top, #F7C04A, #E7B10A);
+        background-image: -ms-linear-gradient(top, #F7C04A, #E7B10A);
+        background-image: -o-linear-gradient(top, #F7C04A, #E7B10A);
+        background-image: linear-gradient(to bottom, #F7C04A, #E7B10A);
+        -webkit-border-radius: 8;
+        -moz-border-radius: 8;
+        border-radius: 8px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 15px;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+      }
+
+      .btn:hover {
+        color: #fff;
+        background: #021d3f;
+        background-image: -webkit-linear-gradient(top, #021d3f, #021d3f);
+        background-image: -moz-linear-gradient(top, #021d3f, #021d3f);
+        background-image: -ms-linear-gradient(top, #021d3f, #021d3f);
+        background-image: -o-linear-gradient(top, #021d3f, #021d3f);
+        background-image: linear-gradient(to bottom, #021d3f, #021d3f);
+        text-decoration: none;
+      }
+    </style>
+    
+</head>
+<body>
+    <div class="container" style="margin-left: 0; padding-left: 0">
+        <nav>
+          <ul>
+              <li><a href="/dhome">
+                  <i class="fas fa-pen"></i>
+                  <span class="nav-item">COMPLAINTCO</span>
+              </a></li>
+              <li><a href="/dhome">
+                  <i class="fas fa-home"></i>
+                  <span class="nav-item">HOME</span>
+              </a></li>
+              <li><a href="/dashboard">
+                <i class="fas fa-chart-bar"></i>
+                <span class="nav-item">DASHBOARD</span>
+              </a></li>
+              <li><a href="/dcomplaints">
+                <i class="fas fa-tasks"></i>
+                <span class="nav-item">COMPLAINTS</span>
+              </a></li>
+              <li><a onclick="logout2()" href="/" class="logout">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span class="nav-item">LOG OUT</span>
+              </a></li>
+          </ul>
+        </nav>
+
+        <section class="main">
+          <div class="main-top">
+            
+            <!-- <i class="fas fa-user-cog"></i> -->
+          </div>
+          <div class="users">
+            
+          </div>
+          
+    <section class="complaints">
+      <div class="inprogress-complaints">
+        
+        <% if(action == 'view') { %>
+          <h1>Complaints</h1>
+        <table class="table">
+          <thead style="text-align: center;">
+            <tr>
+              <th>Complaint id</th>
+              <!-- <th>Roll No.</th> -->
+              <th>Date</th>
+              <th>Description</th>
+              <th>No. of Upvotes</th>
+              <th>Status</th>
+              <th>Remarks</th>
+              <th style="text-align: left;">Action</th>
+            </tr>
+          </thead>
+          <tbody style="text-align: center;">
+            <% if(dcomplaints.length > 0){
+              dcomplaints.forEach(function(data) { %>
+                <tr>
+                  <td><%= data.cid %></td>
+                  <!-- <td><%= data.rollno %></td> -->
+                  <td style="text-align: left;"><%= data.date %></td>
+                  <td><%= data.description %> </td>
+                  <td><%= data.upvotes %></td>
+                  <td name="status" id="<%= data.status %>" id="status"><%= data.status %></td>
+                  <td name="remarks" id="<%= data.remarks %>" id="remarks"><%= data.remarks %></td>
+                  <td style="text-align:center;"><a style="width: 80%" class="btn" href="/dcomplaints/edit/<%= data.cid %>">Edit</a></td>
+                </tr>
+            <%  });
+            } %>
+            
+          </tbody>
+        </table>
+        
+      </div>
+    </section>
+    <% } %>
+
+    <div style="padding-top: 12%;">
+      <% if(action == 'edit' && dcomplaints && cid){ %>
+        <form method="post" action="/dcomplaints/edit/<%= cid %>">
+          <h1 style="text-align: center;">Edit the complaint</h1>
+          <div style="margin-left: 30%; padding: 5%">
+            <label style="padding-bottom: 2%"><h3>Status</h3></label>      
+              <!-- <select name="cars" id="cars" name="status" value="<%= dcomplaints.status %>" style="margin-left: 10%; border:#021d3f solid 1px; padding: 15px; text-align: center; -webkit-border-radius: 8; -moz-border-radius: 8; border-radius: 8px;">
+                <option value="sent">Sent</option>
+                <option value="accepted">Accepted</option>
+                <option value="in progress">In Progress</option>
+                <option value="">Completed</option>
+              </select>  <br><br> -->
+            <input type="text" name="status" value="<%= dcomplaints.status %>" style="margin-left:10%; border:#021d3f solid 1px; padding: 15px; text-align: center; -webkit-border-radius: 8; -moz-border-radius: 8; border-radius: 8px;"><br>
+            <label style="padding-bottom: 2%"><h3>Remarks</h3></label>
+            <input type="textarea" name="remarks" value="<%= dcomplaints.remarks %>" style="text-align: center; margin-left: 5.5%; border:#021d3f solid 1px; padding: 15px; -webkit-border-radius: 8; -moz-border-radius: 8; border-radius: 8px;"><br><br><br>
+            <input type="submit" name="submit_button" id="edit-button" class="btn" style="color: #fff; margin-left: 45%;" value="Edit" href="/dcomplaints">
+            <br><br>
+            <button href="/dcomplaints" class="btn" style="margin-left: 0">Go Back</button>
+          </div>
+      </form>
+      <% } %>
+      <% if(!dcomplaints){ %>
+          console.log("No data");
+      <% } %>
+    </div>
+   
+  </div>
+  
+  <script>
+    const navbar = document.querySelector("nav");
+    if(action == 'edit'){
+      navbar.style.visibility = 'hidden';
+    }
+  </script>
+    
+</body>
+</html>
